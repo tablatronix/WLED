@@ -9,6 +9,7 @@
  * || || ||
  * \/ \/ \/
  */
+#include "neoIndicator.h"
 //#include "usermod_v2_example.h"
 #ifdef USERMOD_DALLASTEMPERATURE
 #include "../usermods/Temperature/usermod_temperature.h"
@@ -87,4 +88,7 @@ void registerUsermods()
 #ifdef USERMOD_DHT
 usermods.add(new UsermodDHT());
 #endif
+
+  usermods.add(new neoIndicator());
+
 }
