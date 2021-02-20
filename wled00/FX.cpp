@@ -1318,7 +1318,7 @@ uint16_t WS2812FX::mode_two_dots()
 uint16_t WS2812FX::tricolor_chase(uint32_t color1, uint32_t color2) {
   uint32_t cycleTime = 50 + (255 - SEGMENT.speed)*2;
   uint32_t it = now / cycleTime;
-  uint8_t width = (1 + SEGMENT.intensity/32) * 3; //value of 1-8 for each colour
+  uint8_t width = (1 + SEGMENT.intensity/32) * 10; //value of 1-8 for each colour
   uint8_t index = it % width;
   
   for(uint16_t i = 0; i < SEGLEN; i++, index++) {
